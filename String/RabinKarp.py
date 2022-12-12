@@ -18,7 +18,7 @@ def RabitKarp():
     for i in range(len(pat) - 1, len(text)):
         if textHash == patHash:
             print("pattern found at", i)
-        textHash=textHash
+        textHash = textHash
 
 
 if __name__ == "__main__":
