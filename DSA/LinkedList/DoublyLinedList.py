@@ -1,4 +1,4 @@
-class Node:
+class DLLNode:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -12,21 +12,21 @@ class DoublyLinkedList:
     # 1. Append at the end
     def append(self, data):
         if self.head is None:
-            self.head = Node(data)
+            self.head = DLLNode(data)
         else:
             temp = self.head
             while temp.next:
                 temp = temp.next
-            temp.next = Node(data)
+            temp.next = DLLNode(data)
             temp.next.prev = temp
 
     # 2. push in front
     def pushFront(self, data):
         if self.head is None:
-            self.head = Node(data)
+            self.head = DLLNode(data)
         else:
             temp = self.head
-            self.head = Node(data)
+            self.head = DLLNode(data)
             self.head.next = temp
 
     # 3. insert at position p
@@ -43,7 +43,7 @@ class DoublyLinkedList:
                     temp = temp.next
                     position += 1
                 temp1 = temp.next
-                temp.next = Node(data)
+                temp.next = DLLNode(data)
                 temp = temp.next
                 temp.next = temp1
 
