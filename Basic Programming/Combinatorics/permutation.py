@@ -31,4 +31,4 @@ a = list(string)
 # Function call
 permute(a, 0, n)
 
-# This code is contributed by Bhavya Jain
+
