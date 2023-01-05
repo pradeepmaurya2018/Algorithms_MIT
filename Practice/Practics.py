@@ -1,40 +1,73 @@
 import collections
-import heapq
 from typing import List
 
 
 class Solution:
-    def mostBooked(self, n: int, meetings: List[List[int]]) -> int:
-        h = [] * n
-        counter = collections.Counter()
-        d = {}
-        n = min(n, len(meetings))
+    ans = 0
+
+    def getWallsInConnectedComponentsUtil(self, graph, i, j, seen):
+        seen[i][j] = 1
+        if not graph[i][j]:
+            self.ans += 1
+        # print(i, j)
+        for a, b in [(i, j - 1), (i - 1, j), (i, j + 1), (i + 1, j)]:
+
+            if 0 <= a < len(graph) and 0 <= b < len(graph[0]):
+                if not seen[a][b]:
+                    if not graph[a][b]:
+                        # print("Here ", a, b)
+                        self.ans += 1
+                    if graph[a][b]:
+                        self.getWallsInConnectedComponentsUtil(graph, a, b, seen)
+
+    def getWallsInConnectedComponents(self, graph):
+        n = len(graph)
+        m = len(graph[0])
+        seen = [[0 for j in range(len(graph[0]))] for i in range(len(graph))]
+        # print(graph)
+        # print(seen)
+        storage = []
+        count = 0
         for i in range(n):
-            heapq.heappush(h, (meetings[i][1], tuple(meetings[i])))
-            d[tuple(meetings[i])] = i
-            counter[i] += 1
-        print(h)
-        for i in range(n, len(meetings)):
-            print(meetings[i])
-            if len(h):
-                item = heapq.heappop(h)
-                print(item, item[1])
-                print("Item ", d[item[1]])
-                counter[d[item[1]]] += 1
-                print(item[0])
+            for j in range(m):
+                if graph[i][j] and not seen[i][j]:
+                    self.ans = 0
+                    self.getWallsInConnectedComponentsUtil(graph, i, j, seen)
+                    print("ans", self.ans)
+                    storage.append((self.ans, i, j))
 
-                heapq.heappush(h, (meetings[i][1] + item[0], tuple(meetings[i])))
-                if tuple(meetings[i]) not in d:
-                    d[tuple(meetings[i])]=d[item[1]]
-        print(counter)
-        L = counter.most_common(1)[0][0]
-        # max_elm=L[0][1]
-        # ans=0
-        # for i in range(len(L)):
-        #     if L[i][1]==max_elm:
-        #         ans+=1
+        storage.sort(reverse=True)
+        count += storage[0][0]
+        storage.pop(0)
+        i, j = storage[0][1], storage[0][2]
+        self.rePopulateGraph(graph, i, j)
 
-        return L
+    def rePopulateGraphUtil(self, graph, i, j, seen):
+        seen[i][j] = 1
+        print("heres ddg ", i, j)
+        for a, b in [(i, j - 1), (i - 1, j), (i, j + 1), (i + 1, j)]:
+            if 0 <= a < len(graph) and 0 <= b < len(graph[0]):
+                print(a, b)
+                print(graph)
+                if not seen[a][b]:
+                    if not graph[a][b]:
+                        graph[a][b] = 1
+                        seen[a][b]=1
+                    if graph[a][b]:
+                        self.getWallsInConnectedComponentsUtil(graph, a, b, seen)
+
+    def rePopulateGraph(self, graph, i, j):
+        seen = [[0 for j in range(len(graph[0]))] for i in range(len(graph))]
+        self.rePopulateGraphUtil(graph, i, j, seen)
+        print(graph)
+
+    def containVirus(self, isInfected: List[List[int]]) -> int:
+        self.getWallsInConnectedComponents(isInfected)
+        return 0
 
 
-print(Solution().mostBooked(4, [[18,19],[3,12],[17,19],[2,13],[7,10]]))
+Solution().containVirus(
+    [[0, 1, 0, 0, 0, 0, 0, 1],
+     [0, 1, 0, 0, 0, 0, 0, 1],
+     [0, 0, 0, 0, 0, 0, 0, 1],
+     [0, 0, 0, 0, 0, 0, 0, 0]])
