@@ -1,4 +1,4 @@
-from DSA.Trees.BinaryTree.BasicTree import TreeNode
+from ADT.Trees.BinaryTree.BasicTree import TreeNode
 
 
 class Solution:

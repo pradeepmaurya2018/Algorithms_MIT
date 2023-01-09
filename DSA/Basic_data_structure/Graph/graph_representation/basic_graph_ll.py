@@ -1,7 +1,7 @@
 """
 Graph representation
 """
-from DSA.Basic_data_structure.LinkedList import SinglyLinkedList
+from ADT.Basic_data_structure.LinkedList import SinglyLinkedList
 
 
 class Graph:
