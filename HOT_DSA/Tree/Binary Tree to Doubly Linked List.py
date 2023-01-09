@@ -1,4 +1,4 @@
-from ADT.Trees.BinaryTree.BasicTree import TreeNode
+from data_structures_and_algorithms.abstract_data_type import TreeNode
 
 
 class Solution:
