@@ -18,11 +18,11 @@ d = collections.defaultdict(list)
 
 
 def combinationRecursive(n, r, l):
-    d[l].append((n,r))
+    d[l].append((n, r))
     if r == 0 or r == n:
         return 1
     else:
-        return combinationRecursive(n - 1, r - 1, l+1) + combinationRecursive(n - 1, r, l+1)
+        return combinationRecursive(n - 1, r - 1, l + 1) + combinationRecursive(n - 1, r, l + 1)
 
 
 def combinationDp(n, r):
@@ -35,6 +35,38 @@ def combinationDp(n, r):
                 dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j]
     # print(np.matrix(dp))
     return dp[n][r]
+
+
+def generatingCombinations(arr, n, r, R):
+    generatingCombinationsUtil(arr, n, r, R)
+
+
+def generatingCombinationsUtil(arr, n, r, R):
+    if r < R:
+        return
+
+    for i in range(r):
+        new_arr = arr[:i] + arr[i + 1:]
+        print(new_arr)
+        generatingCombinationsUtil(new_arr, n, r - 1, R)
+
+c=0
+def inclusionExclusion(arr, data, n, r):
+    inclusionExclusionUtil(arr, data, n, 0, r,0)
+
+
+def inclusionExclusionUtil(arr, data, n, i, r,l):
+    global c
+    if i == n:
+        if l == r:
+            print(c, *data)
+            c+=1
+        return
+
+    data.append(arr[i])
+    inclusionExclusionUtil(arr, data, n, i + 1, r, l+1)
+    data.pop()
+    inclusionExclusionUtil(arr, data, n, i + 1, r, l)
 
 
 def main():
@@ -52,4 +84,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    n = len(string)
+    r = 2
+    inclusionExclusion(string, [], n, r)
