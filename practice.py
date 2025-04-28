@@ -1,56 +1,54 @@
-from itertools import accumulate
+import tkinter as tk
 from typing import List
-
-
 class Solution:
-    def totalStrength(self, strength: List[int]) -> int:
-        mod, n = 10 ** 9 + 7, len(strength)
-
-        # Get the first index of the non-larger value to strength[i]'s right.
-        right_index = [n] * n
-        print(right_index)
-        stack = []
-        for i in range(n):
-            while stack and strength[stack[-1]] >= strength[i]:
-                right_index[stack.pop()] = i
-            stack.append(i)
-
-        # Get the first index of the smaller value to strength[i]'s left.
-        left_index = [-1] * n
-        stack = []
-        for i in range(n - 1, -1, -1):
-            while stack and strength[stack[-1]] > strength[i]:
-                left_index[stack.pop()] = i
-            stack.append(i)
-
-        print(left_index)
-        print(right_index)
-        # prefix sum of the prefix sum array of strength.
-        list1 = list(accumulate(strength, initial=0))
-        print((list1))
-        presum_of_presum = list(accumulate(list1, initial=0))
-        print(presum_of_presum)
-        answer = 0
-        # For each element in strength, we get the value of R_term - L_term.
-        for i in range(n):
-            # Get the left index and the right index.
-            left_bound = left_index[i]
-            right_bound = right_index[i]
-
-            # Get the left_count and right_count (marked as L and R in the previous slides)
-            left_count = i - left_bound
-            right_count = right_bound - i
-
-            # Get positive presum and the negative presum.
-            neg_presum = (presum_of_presum[i + 1] - presum_of_presum[i - left_count + 1]) % mod
-            pos_presum = (presum_of_presum[i + right_count + 1] - presum_of_presum[i + 1]) % mod
-
-            # The total strength of all subarrays that have strength[i] as the minimum.
-            print("answer", answer)
-            answer += strength[i] * (pos_presum * left_count - neg_presum * right_count)
-            answer %= mod
-
-        return answer
+    def orangesRotting(self, grid: List[List[int]]) -> int:
+        n=len(grid)
+        m=len(grid[0])
+        v=[[0 for j in range(m)] for i in range(n)]
 
 
-Solution().totalStrength([2, 1, 4, 2, 3, 5, 1, 1])
+        def display_matrix(matrix):
+            root = tk.Tk()
+            root.title("Matrix Display")
+
+            for i in range(len(matrix)):
+                for j in range(len(matrix[i])):
+                    cell = tk.Label(root, text=str(matrix[i][j]), borderwidth=1, relief="solid", width=5, height=2)
+                    cell.grid(row=i, column=j, padx=2, pady=2)
+
+            root.mainloop()
+
+        def printMat():
+            for i in range(n):
+                print(grid[i])
+            print()
+            # display_matrix(grid)
+
+        def BFS(i,j):
+            q=[(i,j)]
+            while q:
+                i,j=q.pop(0)
+                for a,b in [(-1,0), (1,0), (0,-1), (0,1)]:
+                    i,j=i+a, j+b
+                    if 0<=i<n and 0<=j<m and v[i][j]==0:
+                        grid[i][j]=2
+                        v[i][j]=-1
+        def check():
+            for i in range(n):
+                for j in range(m):
+                    if grid[i][j]==1 or grid[i][j]==0:
+                        return False
+            return True
+        count=0
+        check()
+        printMat()
+        while not check():
+            for i in range(n):
+                for j in range(m):
+                    if grid[i][j]==2:
+                        BFS(i,j)
+                    printMat()
+            count+=1
+        # return count
+
+Solution().orangesRotting([[2,1,1],[1,1,0],[0,1,1]])
