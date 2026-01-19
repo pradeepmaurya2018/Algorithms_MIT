@@ -1,66 +1,85 @@
-import heapq
+import requests
+import json
+
+URL = "https://leetcode.com/graphql"
+
+HEADERS = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Referer": "https://leetcode.com/problemset/all/",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+}
+
+QUERY = """
+query problemsetQuestionListV2(
+  $categorySlug: String
+  $limit: Int
+  $skip: Int
+) {
+  problemsetQuestionListV2(
+    categorySlug: $categorySlug
+    limit: $limit
+    skip: $skip
+  ) {
+    questions {
+      questionFrontendId
+      title
+      titleSlug
+      difficulty
+      paidOnly
+      topicTags {
+        name
+        slug
+      }
+    }
+  }
+}
+"""
+
+def fetch_all_problems(batch_size=100):
+    all_problems = []
+    skip = 0
+
+    while True:
+        payload = {
+            "query": QUERY,
+            "variables": {
+                "categorySlug": "",
+                "limit": batch_size,
+                "skip": skip
+            }
+        }
+
+        response = requests.post(URL, headers=HEADERS, json=payload)
+
+        if response.status_code != 200:
+            print("HTTP Error:", response.status_code)
+            print(response.text)
+            break
+
+        data = response.json()
+
+        if "errors" in data:
+            print("GraphQL Error:", data["errors"])
+            break
+
+        questions = data["data"]["problemsetQuestionListV2"]["questions"]
+
+        if not questions:
+            break
+
+        all_problems.extend(questions)
+        skip += batch_size
+
+        print(f"Fetched {len(all_problems)} problems")
+
+    return all_problems
 
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+if __name__ == "__main__":
+    problems = fetch_all_problems()
 
-    def __repr__(self):  # Optional, for easier debugging
-        return f"ListNode({self.val})"
+    with open("leetcode_problems.json", "w", encoding="utf-8") as f:
+        json.dump(problems, f, indent=2)
 
-
-def mergeKLists(lists):
-    # Min-heap
-    heap = []
-
-    # Push the head of each list into the heap
-    for head in lists:
-        if head:
-            heapq.heappush(heap, (head.val, head))  # Tuple with value and ListNode
-
-    # Dummy node to help build the merged list
-    dummy = ListNode()
-    current = dummy
-
-    # Process the heap
-    while heap:
-        val, node = heapq.heappop(heap)  # Pop the smallest item
-        current.next = node
-        current = current.next
-
-        # If the popped node has a next, push it into the heap
-        if node.next:
-            heapq.heappush(heap, (node.next.val, node.next))
-
-    return dummy.next
-
-
-def create_linked_list(values):
-    dummy = ListNode()
-    current = dummy
-    for val in values:
-        current.next = ListNode(val)
-        current = current.next
-    return dummy.next
-
-# Helper function to print a linked list
-def print_linked_list(head):
-    result = []
-    while head:
-        result.append(head.val)
-        head = head.next
-    print(result)
-
-# Example input
-lists = [
-    create_linked_list([1, 4, 5]),
-    create_linked_list([1, 3, 4]),
-    create_linked_list([2, 6])
-]
-
-# Merge the lists
-merged_head = mergeKLists(lists)
-
-# Output the result
-print_linked_list(merged_head)
+    print(f"\nSaved {len(problems)} problems to leetcode_problems.json")
