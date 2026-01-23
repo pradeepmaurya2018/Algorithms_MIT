@@ -1,7 +1,9 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel
 from cache.url_cache import UrlCache
+from rate_limiter.redis_limiter import RedisRateLimiter
 
+limiter = RedisRateLimiter(limit=10, window_seconds=1)
 router = APIRouter()
 
 class ShortenRequest(BaseModel):
@@ -11,7 +13,14 @@ cache = UrlCache()
 def init_routes(service, server_id):
 
     @router.post("/shorten")
-    def shorten(req: ShortenRequest):
+    def shorten(req: ShortenRequest, request: Request):
+        client_ip = request.client.host
+
+        if not limiter.allow(client_ip):
+            raise HTTPException(
+                status_code=429,
+                detail="Rate limit exceeded. Try again later."
+            )
         mapping = service.shorten(req.longUrl)
         # print("Handled by PID:", server_id)
         cache.set(mapping.short_code, mapping.long_url)
