@@ -70,11 +70,11 @@ def check_rate_limit(req: RateLimitRequest):
             "allowed": True,
             "remaining_tokens": int(bucket["tokens"])
         }
-
-    return {
-        "allowed": False,
-        "retry_after_seconds": 1 / rules.refill_rate
-    }
+    else:
+        return {
+            "allowed": False,
+            "retry_after_seconds": 1 / rules.refill_rate
+        }
 
 
 @app.get("/ratelimit/status/{client_id}")
@@ -101,3 +101,9 @@ def update_rules(new_rules: RateLimitRule):
         "rules": rules
     }
 
+@app.get("/ratelimit/info/{info}")
+def printInfo(info:str):
+    print(f"The given info is {info}")
+    list_d=[1,2,3,4,5,6,7,8,9]
+    # return {"status": "done", "name":"khan"}
+    return buckets
