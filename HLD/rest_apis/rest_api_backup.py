@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel
 from typing import List
 import uuid
@@ -91,3 +91,13 @@ def get_order(order_id: str):
     if order_id not in orders_db:
         raise HTTPException(status_code=404, detail="Order not found")
     return orders_db[order_id]
+
+@app.post("/debug")
+async def debug_request(request: Request):
+    body = await request.body()
+    return {
+        "method": request.method,
+        "url": str(request.url),
+        "headers": dict(request.headers),
+        "body": body.decode()
+    }
