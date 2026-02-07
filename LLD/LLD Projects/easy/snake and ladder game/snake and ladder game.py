@@ -31,8 +31,6 @@ class Board:
     def getFinalPosition(self, pos: int) -> int:
         return self.board_entities.get(pos,pos)
 
-
-
 class Snake(BoardEntry):
     def __init__(self, start, end):
         super().__init__(start, end)
@@ -94,6 +92,7 @@ class Game:
     def winner(self):
         return self.winner
     # @winner.setter
+
     def winner(self, winner):
         self.winner=winner
 
@@ -105,7 +104,6 @@ class Game:
 
     def play(self):
         print("Game started!")
-
         self.setGameStatus(GameStatus.RUNNING)
         count=0
 
