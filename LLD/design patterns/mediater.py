@@ -4,11 +4,11 @@ class User():
         self.mediator=mediator
         self.name=name
 
-    def send(self, reciever, message):
-        self.mediator.transferMessage(self, reciever, message)
+    def send(self, receiver, message):
+        self.mediator.transferMessage(self, receiver, message)
 
     def recieve(self, from_user, message):
-        print(f"From user {from_user.name} recieved message {message} ")
+        print(f"From user {from_user.name} received message {message} ")
 
 
 class ChatRoomMediator():
@@ -18,14 +18,19 @@ class ChatRoomMediator():
     def registerUser(self, user):
         self.users[user.name]=user
 
-    def transferMessage(self, message_sender, messange_reciever  message):
+    def transferMessage(self, message_sender, message_receiver, message):
 
-        messange_reciever.recieve(message_sender, message)
+        message_receiver.recieve(message_sender, message)
 
-        print(f"send message is {message}")
+        # print(f"send message is {message}")
 
 
 if __name__=="__main__":
     chatRoomMediator=ChatRoomMediator()
-    user1=User("alice", chatRoomMediator)
-    user1.send("Hi alice")
+    alice=User("alice", chatRoomMediator)
+    bob=User("bob", chatRoomMediator)
+
+    chatRoomMediator.registerUser(alice)
+    chatRoomMediator.registerUser(bob)
+
+    bob.send(alice, "Hi alice")
