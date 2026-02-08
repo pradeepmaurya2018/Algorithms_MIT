@@ -1,3 +1,4 @@
+from _thread import LockType
 import threading
 import queue
 import time
@@ -13,7 +14,7 @@ pause_event.set()
 
 cancel_event = threading.Event()
 
-lock = threading.Lock()
+lock: LockType = threading.Lock()
 
 stats = {
     "completed": 0,
