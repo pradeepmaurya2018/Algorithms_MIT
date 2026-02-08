@@ -49,11 +49,11 @@ class ThreadSafeSingleton():
 # except Exception as e:
 #     print(e)
 
-class SingletonBest():
+class SingletonBest:
     instant=None
     def __init__(self):
         if SingletonBest.instant is not None:
-            raise Exception("use instancxe method ")
+            raise Exception("use instance method ")
 
     @staticmethod
     def instance():
