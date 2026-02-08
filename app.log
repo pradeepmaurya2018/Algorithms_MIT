@@ -1,0 +1,7 @@
+time=2026-01-28 18:27:22,595 level=INFO service=payment api=[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+time=2026-01-28 18:27:22,596 level=INFO service=payment api=[33mPress CTRL+C to quit[0m
+time=2026-01-28 18:28:06,008 level=ERROR service=payment api=failure user=101 latency=0
+time=2026-01-28 18:28:06,008 level=INFO service=payment api=127.0.0.1 - - [28/Jan/2026 18:28:06] "[35m[1mGET /pay?user=101 HTTP/1.1[0m" 500 -
+time=2026-01-28 18:28:08,161 level=ERROR service=payment api=failure user=101 latency=0
+time=2026-01-28 18:28:08,162 level=INFO service=payment api=127.0.0.1 - - [28/Jan/2026 18:28:08] "[35m[1mGET /pay?user=101 HTTP/1.1[0m" 500 -
