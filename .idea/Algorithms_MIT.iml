@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.13 (Algorithms_MIT)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="3.12 WSL (Ubuntu): (/home/pradeep/.virtualenvs/Algorithms_MIT1/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="HLD" />
   </component>

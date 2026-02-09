@@ -1,36 +1,24 @@
+class ChatMediator:
+    def transferMessage(self, sender, receiver, message):
+        receiver.receive(sender, message)
 
-class User():
-    def __init__(self, name, mediator) -> None:
-        self.mediator=mediator
+
+
+class User:
+    def __init__(self, name, mediator):
         self.name=name
+        self.mediator:ChatMediator=mediator
 
     def send(self, receiver, message):
-        self.mediator.transferMessage(self, receiver, message)
+        self.mediator.transferMessage(self,receiver, message)
 
-    def recieve(self, from_user, message):
-        print(f"From user {from_user.name} received message {message} ")
-
-
-class ChatRoomMediator():
-    def __init__(self) -> None:
-        self.users={}
-
-    def registerUser(self, user):
-        self.users[user.name]=user
-
-    def transferMessage(self, message_sender, message_receiver, message):
-
-        message_receiver.recieve(message_sender, message)
-
-        # print(f"send message is {message}")
-
+    def receive(self, sender, message):
+        print(f"Received a message from {sender.name} {message}")
 
 if __name__=="__main__":
-    chatRoomMediator=ChatRoomMediator()
-    alice=User("alice", chatRoomMediator)
-    bob=User("bob", chatRoomMediator)
+    chatMediator=ChatMediator()
 
-    chatRoomMediator.registerUser(alice)
-    chatRoomMediator.registerUser(bob)
+    allice=User("alice", chatMediator)
+    bob=User("bob", chatMediator)
+    allice.send(bob, "Hi bob")
 
-    bob.send(alice, "Hi alice")
