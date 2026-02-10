@@ -63,7 +63,7 @@ class File:
     pass
 
 class ReadOnlyFile(File):
-    # cant write
+    pass
 
 
 
@@ -82,3 +82,4 @@ if __name__ == "__main__":
     # makeBirdFly(bird)
     # pengiun=Penguin()
     # makeBirdFly(pengiun)
+    pass
