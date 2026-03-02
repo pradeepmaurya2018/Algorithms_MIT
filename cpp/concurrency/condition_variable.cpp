@@ -3,8 +3,8 @@
 //
 
 #include <condition_variable>
-
 #include "../header.h"
+
 queueOfInt q;
 vectorOfInt vec;
 mutex mtx;
@@ -15,6 +15,8 @@ void producer() {
     cout<<"Producing"<<endl;
     for (int i = 0; i <=100000; ++i) {
         unique_lock<mutex> lock(mtx);
+        lock.lock();
+        lock.release();
         q.push(i);
         condVar.notify_one();
     }

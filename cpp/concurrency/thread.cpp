@@ -29,11 +29,14 @@ void increment() {
 
 int main() {
     thread t1(increment);
-    thread t2(increment);
+    // thread t2(increment);
+    int n=thread::hardware_concurrency();
+    cout<<"Hardware concurrency is this "<<t1.get_id();
+
     t1.join();
-    t2.join();
-    cout<<counter;
-    MyThread my_thread;
-    my_thread.run();
+    // t2.join();
+    // cout<<counter;
+    // MyThread my_thread;
+    // my_thread.run();
 
 }
