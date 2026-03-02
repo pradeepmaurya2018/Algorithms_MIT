@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "\\\\wsl.localhost\\Ubuntu\\home\\pradeep\\hdl\\Algorithms_MIT\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\2025\\PycharmProjects\\Algorithms_MIT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4048908A-1006-6A22-6EEA-DF0C90CB0614}|Algorithms_MIT.vcxproj|C:\\Users\\2025\\PycharmProjects\\Algorithms_MIT\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4048908A-1006-6A22-6EEA-DF0C90CB0614}|Algorithms_MIT.vcxproj|solutionrelative:test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.cpp",
+              "DocumentMoniker": "C:\\Users\\2025\\PycharmProjects\\Algorithms_MIT\\test.cpp",
+              "RelativeDocumentMoniker": "test.cpp",
+              "ToolTip": "C:\\Users\\2025\\PycharmProjects\\Algorithms_MIT\\test.cpp",
+              "RelativeToolTip": "test.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-26T19:33:31.469Z",
+              "EditorCaption": ""
             }
           ]
         }
