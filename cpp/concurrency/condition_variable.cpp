@@ -15,8 +15,6 @@ void producer() {
     cout<<"Producing"<<endl;
     for (int i = 0; i <=100000; ++i) {
         unique_lock<mutex> lock(mtx);
-        lock.lock();
-        lock.release();
         q.push(i);
         condVar.notify_one();
     }
@@ -24,7 +22,7 @@ void producer() {
         unique_lock<mutex> lock(mtx);
         done=true;
     }
-    cout<<"Done procucing"<<endl;
+    cout<<"Done producing"<<endl;
     condVar.notify_one();
 }
 

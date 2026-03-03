@@ -1,7 +1,5 @@
 import threading
 
-from scipy.cluster.hierarchy import single
-
 class Singleton():
     _instance=None
     def __new__(cls):

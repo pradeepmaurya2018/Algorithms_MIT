@@ -1,5 +1,3 @@
-from landscape.client.snap_http import switch
-
 
 class Bulb():
     def turnON(self):
