@@ -1,19 +1,22 @@
 import threading
 
+class Bucket:
+    def __init__(self):
+        self.entries=[]
+        self.lock=threading.Lock()
 
 class HashMap:
     def __init__(self):
         self.table_size=10
         self.table=[-1]*self.table_size
-        self.lock=threading.Lock()
 
     def hashVal(self, k):
         return hash(k)%self.table_size
 
     def put(self, k,v):
-        self.lock.acquire()
-        self.table[self.hashVal(k)]=v
-        self.lock.release()
+        # self.lock.acquire()
+        self.table[self.hashVal(k)]=
+        # self.lock.release()
 
     def get(self, k):
         self.lock.acquire()
@@ -34,4 +37,3 @@ if __name__ == '__main__':
 
 # [A]---thinking is simple----> [B]---some more thought--->[C]
 # text, diagram, code
-
