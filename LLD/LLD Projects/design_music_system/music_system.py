@@ -1,4 +1,5 @@
 import collections
+from threading import Thread
 import time
 import pyaudio
 
@@ -19,17 +20,22 @@ class AudioEngine:
         self.stream.stop_stream()
         self.stream.close()
         self.p.terminate()
-class SongPlayer:
+
+class SongPlayer(Thread):
+    def __init__(self) -> None:
+        self.running=True
+
+    def run(self) -> None:
+        print("i am playing the song in a thread")
+
+    def stop(self):
+        self.running=False
+
 class Song:
     def __init__(self, name, duration):
         self.name=name
         self.duration=duration
-    def play(self):
-        time_=self.duration
-        while time_:
-            print(f"I am playing the song {self.name}")
-            time_-=1
-            time.sleep(1)
+
 
 class PlayList:
     def __init__(self, play_list_name):
@@ -37,6 +43,7 @@ class PlayList:
 
     def addSong(self, song):
         self.songList.append(song)
+
     def play(self):
         for song in self.songList:
             song.play()
@@ -50,8 +57,6 @@ class AudioEngin:
         print(f"Paused")
     def stop(self):
         print("Stopped")
-
-
 
 class MusicPlayerSystem:
     def __init__(self):
