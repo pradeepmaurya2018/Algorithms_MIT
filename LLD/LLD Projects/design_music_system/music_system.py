@@ -1,6 +1,25 @@
 import collections
 import time
+import pyaudio
 
+class AudioEngine:
+    def __init__(self, wf):
+        self.p = pyaudio.PyAudio()
+        self.stream = self.p.open(
+            format=self.p.get_format_from_width(wf.getsampwidth()),
+            channels=wf.getnchannels(),
+            rate=wf.getframerate(),
+            output=True
+        )
+
+    def play_chunk(self, data):
+        self.stream.write(data)
+
+    def close(self):
+        self.stream.stop_stream()
+        self.stream.close()
+        self.p.terminate()
+class SongPlayer:
 class Song:
     def __init__(self, name, duration):
         self.name=name
@@ -24,7 +43,7 @@ class PlayList:
 
 class AudioEngin:
     def __init__(self):
-         pass
+        pass
     def play(self, s):
         print(f"Playing song {s}")
     def pause(self):
