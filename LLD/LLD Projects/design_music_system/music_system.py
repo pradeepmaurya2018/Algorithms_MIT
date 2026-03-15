@@ -1,5 +1,6 @@
 import collections
 from threading import Thread
+import threading
 import time
 import pyaudio
 
@@ -24,12 +25,19 @@ class AudioEngine:
 class SongPlayer(Thread):
     def __init__(self) -> None:
         self.running=True
+        self.event=threading.Event()
 
     def run(self) -> None:
+        while self.running:
+            self.event.wait(timeout=30)
+            print("playing the chunk of file")
+            time.sleep(0.2)
+
         print("i am playing the song in a thread")
 
     def stop(self):
         self.running=False
+        self.event.set()
 
 class Song:
     def __init__(self, name, duration):
