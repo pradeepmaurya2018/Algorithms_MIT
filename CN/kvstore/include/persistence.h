@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "storage.h"
+#include "../src/storage.h"
 
 void appendLog(const std::string&);
 void loadLog(storage&);

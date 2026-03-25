@@ -1,4 +1,4 @@
-#include "cluster.h"
+#include "../include/cluster.h"
 #include <functional>
 
 int Cluster::getNode(const std::string &key){

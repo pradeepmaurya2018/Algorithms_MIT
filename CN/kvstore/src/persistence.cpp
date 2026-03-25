@@ -1,5 +1,5 @@
 #include "persistence.h"
-#include "parser.h"
+#include "../include/parser.h"
 #include <fstream>
 
 std::string logfile="kvlog.txt";

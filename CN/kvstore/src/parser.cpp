@@ -1,4 +1,4 @@
-#include "parser.h"
+#include "../include/parser.h"
 #include <sstream>
 
 std::vector<std::string> split(const std::string &s){

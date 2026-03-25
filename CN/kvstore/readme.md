@@ -1,4 +1,4 @@
-# Distributed Key-Value Store in C++
+# NebulaKV – Distributed Key-Value Store (C++)
 
 A high-performance **distributed in-memory key-value database** implemented in C++ using Linux system primitives.
 The system demonstrates core infrastructure concepts including event-driven networking, persistence, replication, cluster routing, and consistent hashing.

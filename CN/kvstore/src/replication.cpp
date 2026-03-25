@@ -1,4 +1,4 @@
-#include "replication.h"
+#include "../include/replication.h"
 #include <sys/socket.h>
 
 void Replication::addReplica(int fd){

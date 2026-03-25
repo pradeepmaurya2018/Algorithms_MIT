@@ -1,4 +1,4 @@
-#include "consistent_hash.h"
+#include "../include/consistent_hash.h"
 #include <functional>
 
 void ConsistentHash::addNode(const std::string &node){
