@@ -3,6 +3,7 @@ import queue
 from threading import Thread
 
 sem=threading.Semaphore(10)
+threading.BoundedSemaphore(2)
 q=[]
 
 def worker():
@@ -12,11 +13,10 @@ def worker():
     sem.release()
 
 def semaphoreTesting():
-    thread1=Thread(target=worker)
+    thread1=Thread(target=worker, )
     thread2=Thread(target=worker)
     thread1.start()
     thread2.start()
-
 
 if __name__ == '__main__':
     semaphoreTesting()

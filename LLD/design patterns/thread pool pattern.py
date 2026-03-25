@@ -6,15 +6,17 @@ class Task():
     def __init__(self):
         pass
 
-    def run(self):
+    def doTask(self):
         print(f"[{threading.current_thread().name}] task is running")
 
-class ThreadPool:
+
+class ThreadPoolExecutor:
     def __init__(self, pool_size):
         self.task_queue=[]
         self.workers=[]
         self.shutdown_flag=False
         self.lock=threading.Lock()
+
         for i in range(pool_size):
             thread = threading.Thread(target=self.workerRun,   name=f"Worker-{i}",daemon=True)
             self.workers.append(thread)
@@ -27,13 +29,13 @@ class ThreadPool:
     def workerRun(self):
         # print("Worker started ")
         print(f"[{threading.current_thread().name}] started")
-        while self.shutdown_flag==False:
+        while not self.shutdown_flag:
             time.sleep(1)
             with self.lock:
                 if self.task_queue:
                     task:Task=self.task_queue.pop(0)
                 # print(task)
-                    task.run()
+                    task.doTask()
 
     def shutdown(self):
         while self.task_queue:
@@ -44,7 +46,7 @@ class ThreadPool:
 
 def main():
     task=Task()
-    threadPool=ThreadPool(3)
+    threadPool=ThreadPoolExecutor(3)
     threadPool.submitTask(task)
     # threadPool.shutdown()
     for i in range(10):
