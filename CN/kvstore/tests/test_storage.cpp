@@ -3,7 +3,7 @@
 
 int main(){
 
-    Storage s;
+    storage s;
 
     assert(s.set("a","1") == "OK\n");
     assert(s.get("a") == "1\n");
@@ -11,4 +11,5 @@ int main(){
     s.del("a");
 
     assert(s.get("a") == "NULL\n");
+
 }

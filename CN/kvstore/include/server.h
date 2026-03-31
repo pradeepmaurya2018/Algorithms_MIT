@@ -1,7 +1,7 @@
 #pragma once
-#include "../src/storage.h"
+#include "../include/storage.h"
 
 class server{
 public:
-    void run();
+    static void run();
 };

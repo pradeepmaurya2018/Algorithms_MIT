@@ -1,6 +1,6 @@
-#include "server.h"
+#include "../include/server.h"
 #include "../include/parser.h"
-#include "persistence.h"
+#include "../include/persistence.h"
 #include <iostream>
 #include <unistd.h>
 #include <cstring>
@@ -13,9 +13,10 @@ void server::run(){
 
     loadLog(store);
 
+
     int server_fd = socket(AF_INET,SOCK_STREAM,0);
 
-    sockaddr_in addr{};
+    sockaddr_in addr;
     addr.sin_family=AF_INET;
     addr.sin_port=htons(6379);
     addr.sin_addr.s_addr=INADDR_ANY;
