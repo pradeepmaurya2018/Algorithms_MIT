@@ -14,7 +14,7 @@ void worker(int requests){
         addr.sin_port = htons(6379);
         inet_pton(AF_INET,"127.0.0.1",&addr.sin_addr);
 
-        connect(s,(sockaddr*)&addr,sizeof(addr));
+        connect(s,reinterpret_cast<sockaddr *>(&addr),sizeof(addr));
 
         std::string cmd="SET bench value\n";
 

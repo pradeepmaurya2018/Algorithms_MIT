@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 
-class Replication {
+class replication {
 public:
     std::vector<int> replicas;
 
