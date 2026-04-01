@@ -1,30 +1,15 @@
 #include "header.h"
 
-class Song {
-public:
-    int songId;
-    string songName;
-    Song() {
-
+class This{
+    int x;
+    public:
+    This(){
+        
     }
-};
-class Playing {
-public:
-
-};
-class Paused {
-
-};
-
-class MusicSystem {
-public:
-    void play(){};
-    void pause(){};
-    void resume(){};
-};
-
+}
 
 int main(int argc, char *argv[]) {
-    MusicSystem system;
+    auto arr=vector<int>{1,2,3,4,5};
+    auto
 }
 

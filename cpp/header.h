@@ -10,10 +10,15 @@
 #include <mutex>
 #include <condition_variable>
 #include <cstdlib>
-#include <print>
 
 using namespace  std;
 
 using vectorOfInt=vector<int>;
 using vectorOfString=vector<string>;
 using queueOfInt=queue<int>;
+
+template<typename ... Args>
+void print(Args ...args) {
+    (cout << ... << args);
+    cout<<endl;
+}
