@@ -5,11 +5,17 @@
 
 class A {
     public:
+    A(){};
     A(initializer_list<int> list) {
         for (auto it=list.begin(); it!=list.end(); ++it) {
             std::cout << *it << std::endl;
         }
     }
+    private:
+    int     age;
+    char    name[20];
+    double  weight;
+    char    address[20];
 };
 
 int main(int argc, char *argv[]) {
