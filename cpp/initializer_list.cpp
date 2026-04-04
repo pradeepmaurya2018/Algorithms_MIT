@@ -6,6 +6,7 @@
 class A {
     public:
     A(){};
+
     A(initializer_list<int> list) {
         for (auto it=list.begin(); it!=list.end(); ++it) {
             std::cout << *it << std::endl;
@@ -20,6 +21,5 @@ class A {
 
 int main(int argc, char *argv[]) {
     A a={1,12,2,2,34,4,5,6};
-
 
 }

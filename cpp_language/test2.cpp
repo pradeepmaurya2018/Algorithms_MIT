@@ -6,6 +6,11 @@
 #include<vector>
 using namespace std;
 
+class A {
+public:
+    void f() { }
+    
+};
 int main() {
     cout<<"Hello"<<endl;
     vector<int> arr={1,12,3,24,5,6,17,78,};
@@ -13,4 +18,5 @@ int main() {
         cout<<*it<<" ";
         cout<<"This is simple and "<<endl;
     }
+
 }

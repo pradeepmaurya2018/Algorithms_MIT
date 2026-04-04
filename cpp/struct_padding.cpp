@@ -15,4 +15,5 @@ int main(int argc, char *argv[]) {
     cout<<sizeof(int)<<endl;
     cout<<sizeof(char)<<endl;
     cout<<sizeof(double)<<endl;
+
 }

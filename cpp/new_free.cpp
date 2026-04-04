@@ -7,7 +7,7 @@
 class A {
 public:
     A() {
-        println("Caalled new");
+        println("Called new");
     }
     ~A() {
        println("Called des");

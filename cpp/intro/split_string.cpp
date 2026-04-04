@@ -1,3 +1,17 @@
-//
-// Created by 2025 on 4/3/2026.
-//
+#include "../header.h"
+
+class This {
+public:
+    void print(string str) {
+        cout << str << endl;
+    }
+};
+
+int main(int argc, char *argv[]) {
+    int x{3};
+    print("This is just awesome");
+    print(" and constructive and cumulative");
+    if (auto name="pradeep"; name !="sudeep") {
+        cout << name << endl;
+    }
+}
