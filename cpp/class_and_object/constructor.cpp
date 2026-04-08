@@ -4,6 +4,7 @@
 
 #include "../header.h"
 
+
 class Point {
 public:
     int x;

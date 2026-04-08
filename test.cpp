@@ -13,6 +13,7 @@ int main() {
 	cin.tie(nullptr);
 	cout << "Hello world";
 	cout << "why us this simple and ";
+	
 	return 0;
 }
 
