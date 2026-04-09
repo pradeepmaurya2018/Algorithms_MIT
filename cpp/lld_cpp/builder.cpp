@@ -3,19 +3,21 @@
 //
 #include "../header.h"
 class HttpRequest {
+
 public:
     string url;
     string method;
     map<string,string> header;
-    map<string,string> params;
+    string params;
     string body;
     int timeout;
+
 
     class Builder {
         string url;
         string method="GET";
-        map<string,string> header;
-        map<string,string> params;
+        string header;
+        string  params;
         string body;
         int timeout=3000;
     public:
@@ -28,6 +30,13 @@ public:
             this->header=header;
             return *this;
         }
-
+        Builder& addParam(string &param) {
+            this->params=param;
+            return *this;
+        }
     };
 };
+
+int main(int argc, char *argv[]) {
+
+}
