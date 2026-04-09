@@ -8,10 +8,19 @@
 #define vi vector<int>
 using namespace std;
 
-int main() {
-  cout << "Hello word";
-  vi list = {
-      1, 2, 3, 4, 5, 6, 7,
-  };
-  sort(list.begin(), list.end());
+class Base
+{
+  public:
+  virtual void baseNameIsAllTimeGreat()=0;
+};
+class D:public Base{
+  public:
+  void baseNameIsAllTimeGreat() override  {
+    cout<<"Base"<<endl;
+  }
+};
+int main()
+{
+  Base* b = new D;
+  cout<<"Base"<<endl;
 }

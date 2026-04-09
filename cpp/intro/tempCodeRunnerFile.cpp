@@ -5,17 +5,15 @@
 #include <vector>
 #include <algorithm>
 #define vi vector<int>
+
+
+// import std;
 using namespace std;
 
 int main() {
     cout<<"Hello word";
     vi list={1,2,3,4,5,6,7,};
     sort(list.begin(), list.end());
-
-
-
-
-
 
 
 
