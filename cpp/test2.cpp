@@ -1,15 +1,19 @@
 #include "header.h"
 
-class This{
-    int x;
-    public:
-    This(){
-        
+class Solution {
+public:
+    int singleNumber(vector<int> nums) {
+        int ans=0;
+        for(auto a:nums){
+            ans=ans^a;
+        }
+        cout<<ans;
+        return ans;
     }
-}
+};
 
-int main(int argc, char *argv[]) {
-    auto arr=vector<int>{1,2,3,4,5};
-    auto
+int main() {
+    Solution s;
+    s.singleNumber({1,2,3,4,5,1,3,4,5});
+    string my_string;
 }
-
