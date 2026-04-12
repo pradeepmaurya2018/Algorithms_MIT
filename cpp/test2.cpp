@@ -2,18 +2,22 @@
 
 class Solution {
 public:
-    int singleNumber(vector<int> nums) {
-        int ans=0;
-        for(auto a:nums){
-            ans=ans^a;
+    void bfs(int i, int j) {
+        queue<tuple<int, int, int>> q;
+        q.emplace(i, j,2);
+        while (!q.empty()) {
+            auto [c,a,b]=q.front();
+            q.pop();
+
         }
-        cout<<ans;
-        return ans;
+    vector<vector<int>> floodFill(vector<vector<int>>&& image, int sr, int sc, int color) {
+            
+        }
     }
 };
 
 int main() {
     Solution s;
-    s.singleNumber({1,2,3,4,5,1,3,4,5});
+    s.floodFill({{1,1,1},{1,1,0},{1,0,1}}, 1,  1, 2);
     string my_string;
 }

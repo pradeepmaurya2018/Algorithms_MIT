@@ -23,7 +23,8 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    char buffer[4096];
+    char buffer[20];
+
     size_t bytes;
 
     while ((bytes = fread(buffer, 1, sizeof(buffer), src)) > 0) {
