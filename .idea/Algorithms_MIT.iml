@@ -8,11 +8,12 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/python3.12/site-packages" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/HLD/Design URL Shortener/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.14 (Algorithms_MIT)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="WSL (Ubuntu): (/home/workstation/Algorithms_MIT/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="HLD" />
     <orderEntry type="library" name="Python 3.13 (Algorithms_MIT) interpreter library" level="application" />

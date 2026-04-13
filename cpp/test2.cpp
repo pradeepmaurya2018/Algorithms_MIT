@@ -1,23 +1,9 @@
 #include "header.h"
 
-class Solution {
-public:
-    void bfs(int i, int j) {
-        queue<tuple<int, int, int>> q;
-        q.emplace(i, j,2);
-        while (!q.empty()) {
-            auto [c,a,b]=q.front();
-            q.pop();
 
-        }
-    vector<vector<int>> floodFill(vector<vector<int>>&& image, int sr, int sc, int color) {
-            
-        }
-    }
-};
+int main(int argc, char *argv[]) {
+    print("This is just awesome \n");
+    int socket_fd=socket(AF_INET,SOCK_STREAM,0);
+    
 
-int main() {
-    Solution s;
-    s.floodFill({{1,1,1},{1,1,0},{1,0,1}}, 1,  1, 2);
-    string my_string;
 }
