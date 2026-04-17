@@ -3,6 +3,13 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.8 (Algorithms_MIT)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (Algorithms_MIT)" project-jdk-type="Python SDK" />
-  <component name="WestSettings"><![CDATA[{}]]></component>
+  <component name="CidrRootsConfiguration">
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/.vs" />
+      <file path="$PROJECT_DIR$/.vscode" />
+      <file path="$PROJECT_DIR$/AI_ML" />
+    </excludeRoots>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="WSL (Ubuntu): (/home/workstation/Algorithms_MIT/bin/python)" project-jdk-type="Python SDK" />
+  <component name="WestSettings">{}</component>
 </project>

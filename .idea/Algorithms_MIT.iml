@@ -12,6 +12,8 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/HLD/Design URL Shortener/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/lib" />
     </content>
     <orderEntry type="jdk" jdkName="WSL (Ubuntu): (/home/workstation/Algorithms_MIT/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

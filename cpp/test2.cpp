@@ -1,9 +1,16 @@
-#include "header.h"
+#include <pthread.h>
 
+#include "unistd.h"
+#include <stdio.h>
 
-int main(int argc, char *argv[]) {
-    print("This is just awesome \n");
-    int socket_fd=socket(AF_INET,SOCK_STREAM,0);
-    
-
+void func() {
+    printf(" i am a thread");
 }
+
+int main(int argc,char*argv[]) {
+    auto id= fork();
+    printf("%d", id);
+    unsigned long int thread;
+    pthread_create(&thread, NULL, &func, NULL);
+}
+
