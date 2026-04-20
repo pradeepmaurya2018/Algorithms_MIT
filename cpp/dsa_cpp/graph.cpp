@@ -10,9 +10,6 @@ int main() {
     for (int i=0; i<10; i++) {
         graph[random()%8].push_back(i+1);
     }
-    void DFS() {
-
-    }
     print_one(graph);
 
 

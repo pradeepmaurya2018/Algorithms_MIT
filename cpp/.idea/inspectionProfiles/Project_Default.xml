@@ -1,0 +1,95 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="a2wsgi" />
+          <option value="aiodns" />
+          <option value="async_timeout" />
+          <option value="brotli" />
+          <option value="brotlicffi" />
+          <option value="camera" />
+          <option value="ConfigParser" />
+          <option value="contextlib2" />
+          <option value="cryptography" />
+          <option value="cube" />
+          <option value="cython" />
+          <option value="docutils" />
+          <option value="email_validator" />
+          <option value="eval_type_backport" />
+          <option value="exceptiongroup" />
+          <option value="fastapi_cli" />
+          <option value="filelock" />
+          <option value="Flask" />
+          <option value="gunicorn" />
+          <option value="h2" />
+          <option value="HTMLParser" />
+          <option value="httptools" />
+          <option value="httpx" />
+          <option value="hypothesis" />
+          <option value="importlib_metadata" />
+          <option value="ipython" />
+          <option value="ipywidgets" />
+          <option value="itsdangerous" />
+          <option value="Jinja2" />
+          <option value="jnius" />
+          <option value="js" />
+          <option value="keyring" />
+          <option value="landscape" />
+          <option value="mask" />
+          <option value="matplotlib" />
+          <option value="Mesh" />
+          <option value="mock" />
+          <option value="networkx" />
+          <option value="numpy" />
+          <option value="openai" />
+          <option value="orjson" />
+          <option value="outcome" />
+          <option value="passlib" />
+          <option value="Pillow" />
+          <option value="protobuf" />
+          <option value="psycopg2" />
+          <option value="pyaudio" />
+          <option value="pygame" />
+          <option value="pymongo" />
+          <option value="PyOpenGL" />
+          <option value="pyOpenSSL" />
+          <option value="pytest" />
+          <option value="python-dotenv" />
+          <option value="python_jose" />
+          <option value="python_multipart" />
+          <option value="PyYAML" />
+          <option value="railroad" />
+          <option value="redis" />
+          <option value="scapy" />
+          <option value="scikit_learn" />
+          <option value="scipy" />
+          <option value="sentence_transformers" />
+          <option value="simplejson" />
+          <option value="slowapi" />
+          <option value="sniffio" />
+          <option value="Sphinx" />
+          <option value="thread" />
+          <option value="toml" />
+          <option value="torch" />
+          <option value="tornado" />
+          <option value="trio" />
+          <option value="ujson" />
+          <option value="urllib3_secure_extra" />
+          <option value="watchfiles" />
+          <option value="winloop" />
+          <option value="wsproto" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="INFORMATION" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E302" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>

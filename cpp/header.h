@@ -1,5 +1,13 @@
 #pragma once
-#include <bits/stdc++.h>
+
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <iostream>
+#include <print>
+#include <map>
+#include <string>
+
 using namespace std;
 
 // ------------------ TYPE TRAITS ------------------
@@ -36,7 +44,7 @@ print_one(const T& container) {
         print_one(x);
         cout << " ";
     }
-    cout << "]";
+    cout << "]\n";
 }
 
 // Pair
@@ -46,7 +54,7 @@ void print_one(const pair<A,B>& p) {
     print_one(p.first);
     cout << ", ";
     print_one(p.second);
-    cout << ")";
+    cout << ")\n";
 }
 
 
