@@ -9,7 +9,7 @@ static struct net_device *my_dev;
 
 /* ---------- TX Function ---------- */
 static netdev_tx_t my_xmit(struct sk_buff *skb, struct net_device *dev) {
-    printk(KERN_INFO "my_nic: Packet transmitted (%u bytes)\n", skb->len);
+    printk(KERN_INFO, "my_nic: Packet transmitted (%u bytes)\n", skb->len);
 
     /* Free packet */
     dev_kfree_skb(skb);
@@ -19,14 +19,14 @@ static netdev_tx_t my_xmit(struct sk_buff *skb, struct net_device *dev) {
 
 /* ---------- Open (ifconfig up) ---------- */
 static int my_open(struct net_device *dev) {
-    printk(KERN_INFO "my_nic: Device opened\n");
+    printk(KERN_INFO, "my_nic: Device opened\n");
     netif_start_queue(dev);
     return 0;
 }
 
 /* ---------- Stop (ifconfig down) ---------- */
 static int my_stop(struct net_device *dev) {
-    printk(KERN_INFO "my_nic: Device closed\n");
+    printk(KERN_INFO, "my_nic: Device closed\n");
     netif_stop_queue(dev);
     return 0;
 }
