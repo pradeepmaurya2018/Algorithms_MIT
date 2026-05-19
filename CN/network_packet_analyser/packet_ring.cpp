@@ -93,7 +93,6 @@ bool PacketRing::init()
         perror("bind");
         return false;
     }
-
     return true;
 }
 

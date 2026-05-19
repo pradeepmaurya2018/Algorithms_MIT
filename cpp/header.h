@@ -1,14 +1,45 @@
 #pragma once
-
 #include <vector>
 #include <string>
 #include <algorithm>
 #include <iostream>
 #include <print>
 #include <map>
+#include <list>
 #include <string>
+#include <print>
+#include <queue>
+#include <bitset>
+#include <stack>
+#include <numeric>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
 
 using namespace std;
+
+template<typename T>
+ostream& operator<<(ostream& os, const vector<T>& v);
+
+template<typename T>
+class vec:public vector<T>{
+public:
+    using vector<T>::vector;
+    friend ostream& operator<<<T>(ostream& os, const vector<T>& v);
+};
+template<typename T>
+ostream& operator<<(ostream& os, const vector<T>& v) {
+    os<<"[ ";
+    for(auto e:v) {
+        os<<e<<",";
+    }
+    os<<" ]";
+    os<<endl;
+    return os;
+
+}
+
+#define FOR(i,n) for(int i=0;i<n;i++)
 
 // ------------------ TYPE TRAITS ------------------
 

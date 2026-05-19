@@ -29,5 +29,5 @@ public:
 };
 
 int main(int argc, char *argv[]) {
-    cout<<"HIIIIIIIII";
+    cout<<"HIIIIIIIII"<<endl;
 }

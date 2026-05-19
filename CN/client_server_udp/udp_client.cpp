@@ -1,31 +1,25 @@
-//
-// Created by 2025 on 3/13/2026.
-//
 #include <stdio.h>
 #include <string.h>
 #include <arpa/inet.h>
 #include <unistd.h>
 
 int main() {
+    int sock = socket(AF_INET, SOCK_DGRAM, 0);
 
-    int sockfd;
-    char buffer[1024];
-    struct sockaddr_in server_addr;
-    socklen_t len = sizeof(server_addr);
+    struct sockaddr_in addr;
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(9090);
+    addr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
-    sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+    char msg[] = "Hello Loopback";
 
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(9000);
-    inet_pton(AF_INET, "127.0.0.1", &server_addr.sin_addr);
+    sendto(sock, msg, strlen(msg), 0,
+           (struct sockaddr*)&addr, sizeof(addr));
 
-    sendto(sockfd, "hello server", 12, 0,
-           (struct sockaddr*)&server_addr, len);
+    printf("Packet sent\n");
 
-    recvfrom(sockfd, buffer, sizeof(buffer), 0,
-             (struct sockaddr*)&server_addr, &len);
+    close(sock);
+    return 0;
 
-    printf("Server reply: %s\n", buffer);
 
-    close(sockfd);
 }
