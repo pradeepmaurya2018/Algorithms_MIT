@@ -1,21 +1,33 @@
+// #include <memory>
 //
 // Created by 2025 on 2/26/2026.
 //
-struct Node {
+#include "../header.h"
+struct resource{
     int data;
-    Node(int data) {
+    resource(int data) {
         this->data=data;
     }
 };
-
-class SharePointer {
+template<typename T>
+class SharedPointer {
 public:
     int ref_cnt=0;
-    Node* node=nullptr;
-    SharePointer(SharePointer&)=delete;
-    SharePointer operator=(SharePointer&)=delete;
+    static T* node;
+    SharedPointer(SharedPointer&)=delete;
+    SharedPointer operator=(SharedPointer&)=delete;
 
-    auto make_shared(Node node) {
-        this->node=new Node(node.data);
+    static T* make_shared(int d) {
+        node=new T(d);
+        return node;
+    }
+    int operator*(T &t) {
+        return node->data;
     }
 };
+
+int main(int argc,char*argv[]) {
+    cout<<"Hello world"<<endl;
+    resource *ptr=SharedPointer<resource>::make_shared(4);
+    // cout<<(ptr);
+}

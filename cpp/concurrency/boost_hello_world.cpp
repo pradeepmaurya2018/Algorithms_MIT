@@ -16,7 +16,6 @@ int main() {
         cout<<boost_vector[i];
     }
 
-
     return 0;
 
 

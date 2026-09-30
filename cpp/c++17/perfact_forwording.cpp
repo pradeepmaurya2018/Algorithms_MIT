@@ -1,7 +1,4 @@
 #include "../header.h"
-
-
-
 class LRUCache {
 public:
         list<pair<int,int>> cache;

@@ -59,6 +59,6 @@ bool PacketCapture::start()
             PacketParser::parse(buffer, bytes);
         }
     }
-
     return true;
 }
+

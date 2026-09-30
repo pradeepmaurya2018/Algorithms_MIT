@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/Operating System/pros/reference-limine" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Operating System/pros/reference-limine/kernel/cc-runtime" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Operating System/pros/reference-limine/kernel/freestanding-c-hdrs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Operating System/pros/reference-limine/kernel/limine-protocol" vcs="Git" />
   </component>
 </project>
