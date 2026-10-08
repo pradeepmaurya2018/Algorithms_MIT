@@ -1,27 +1,24 @@
+
 #include<stdio.h>
-#include <pthread.h>
+#define SIZE 10
 
-int turn=0;
+typedef struct {
+    int top;
+    int st[SIZE];
+} stack_t;
 
-pthread_mutex_t mutex;
-pthread_cond_t cond;
-void* even(void*) {
-    while(turn==0) {
-        printf("\n Producer: ");
-        pthread_cond_wait(&cond, &mutex);
-    }
+stack_t s1={.top=-1};
+int is_empty() {
+    return s1.top==-1;
+}
+int is_full() {
+    return s1.top==SIZE;
 }
 
-void* consumer_funct(void*) {
-    printf("\n Consumer: ");
+int stack_push(int d) {
+    if(is_full()) return -1;
 }
-
 
 int main(int argc,char*argv[]) {
-    pthread_t producer;
-    pthread_t consumer;
-
-    pthread_create(&producer, NULL, producer_funct,0);
-    pthread_create(&consumer, NULL, consumer_funct,0);
 
 }
