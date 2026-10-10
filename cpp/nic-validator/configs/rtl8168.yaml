@@ -1,0 +1,17 @@
+device:
+  pci: "0000:02:00.0"
+  interface: "enp2s0"
+
+tests:
+  packet_sizes:
+    - 64
+    - 65
+    - 128
+    - 256
+    - 512
+    - 1024
+    - 1518
+
+  packet_count: 10000
+  timeout_ms: 1000
+  stress_duration_sec: 3600
