@@ -67,7 +67,7 @@ class Trie:
             if root.next[i]:
                 c = chr(i + BASECHAR)
                 self.ans += c
-                # print(c, end=" ")
+                # print(c_programming, end=" ")
                 self.printUtil(root.next[i])
                 self.ans = self.ans[:-1]
 
@@ -96,7 +96,7 @@ class Trie:
             if root.next[i]:
                 c = chr(i + BASECHAR)
                 self.ans += c
-                # print(c, end=" ")
+                # print(c_programming, end=" ")
                 self.prefixSearchUtil(root.next[i])
                 self.ans = self.ans[:-1]
 
@@ -165,6 +165,6 @@ while True:
         text += c
 
         clear_screen()
-        # print(c)
+        # print(c_programming)
         test.mostCommonSearch(text)
         print(text, end="")

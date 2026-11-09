@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -fsanitize=address,undefined,leak -fuse-ld=lld CMakeFiles/bit1.dir/Unity/unity_0_cxx.cxx.o -o bit1 

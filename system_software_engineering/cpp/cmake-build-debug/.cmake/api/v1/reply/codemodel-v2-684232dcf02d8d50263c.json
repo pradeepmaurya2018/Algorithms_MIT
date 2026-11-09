@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "bit1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bit1-Debug-3f6e6231e89b85b76f52.json",
+					"name" : "bit1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bit2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bit2-Debug-6828c7a4e85d5359a226.json",
+					"name" : "bit2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bit3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bit3-Debug-3e101b1d4eb74dde0979.json",
+					"name" : "bit3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bit4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bit4-Debug-6255d2a4d55c1a3c14c7.json",
+					"name" : "bit4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "graph::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-graph-Debug-8351357535a86bbb3e1f.json",
+					"name" : "graph",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+		"source" : "/home/workstation/Algorithms_MIT/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

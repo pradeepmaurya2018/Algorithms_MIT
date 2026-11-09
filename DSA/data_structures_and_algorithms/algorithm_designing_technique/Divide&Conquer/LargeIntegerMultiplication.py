@@ -88,7 +88,7 @@ def main():
     c = karatsuba(a, b)
     end = time.process_time_ns()
     time_taken = end - start
-    # print(c1, c)
+    # print(c1, c_programming)
     print(time_taken1/100000, time_taken/100000)
     # print(100*time_taken/time_taken1)
 

@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -fpch-instantiate-templates -Xclang -emit-pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit1.dir/cmake_pch.hxx -x c++-header -o CMakeFiles/bit1.dir/cmake_pch.hxx.pch -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit1.dir/cmake_pch.hxx.cxx",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit1.dir/cmake_pch.hxx.cxx",
+  "output": "CMakeFiles/bit1.dir/cmake_pch.hxx.pch"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -Xclang -include-pch -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit1.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit1.dir/cmake_pch.hxx -o CMakeFiles/bit1.dir/Unity/unity_0_cxx.cxx.o -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit1.dir/Unity/unity_0_cxx.cxx",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit1.dir/Unity/unity_0_cxx.cxx",
+  "output": "CMakeFiles/bit1.dir/Unity/unity_0_cxx.cxx.o"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -fpch-instantiate-templates -Xclang -emit-pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit2.dir/cmake_pch.hxx -x c++-header -o CMakeFiles/bit2.dir/cmake_pch.hxx.pch -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit2.dir/cmake_pch.hxx.cxx",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit2.dir/cmake_pch.hxx.cxx",
+  "output": "CMakeFiles/bit2.dir/cmake_pch.hxx.pch"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -Xclang -include-pch -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit2.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit2.dir/cmake_pch.hxx -o CMakeFiles/bit2.dir/Unity/unity_0_cxx.cxx.o -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit2.dir/Unity/unity_0_cxx.cxx",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit2.dir/Unity/unity_0_cxx.cxx",
+  "output": "CMakeFiles/bit2.dir/Unity/unity_0_cxx.cxx.o"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -fpch-instantiate-templates -Xclang -emit-pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit3.dir/cmake_pch.hxx -x c++-header -o CMakeFiles/bit3.dir/cmake_pch.hxx.pch -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit3.dir/cmake_pch.hxx.cxx",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit3.dir/cmake_pch.hxx.cxx",
+  "output": "CMakeFiles/bit3.dir/cmake_pch.hxx.pch"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -Xclang -include-pch -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit3.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit3.dir/cmake_pch.hxx -o CMakeFiles/bit3.dir/Unity/unity_0_cxx.cxx.o -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit3.dir/Unity/unity_0_cxx.cxx",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit3.dir/Unity/unity_0_cxx.cxx",
+  "output": "CMakeFiles/bit3.dir/Unity/unity_0_cxx.cxx.o"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -fpch-instantiate-templates -Xclang -emit-pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/graph.dir/cmake_pch.hxx -x c++-header -o CMakeFiles/graph.dir/cmake_pch.hxx.pch -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/graph.dir/cmake_pch.hxx.cxx",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/graph.dir/cmake_pch.hxx.cxx",
+  "output": "CMakeFiles/graph.dir/cmake_pch.hxx.pch"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -Xclang -include-pch -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/graph.dir/cmake_pch.hxx.pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/graph.dir/cmake_pch.hxx -o CMakeFiles/graph.dir/Unity/unity_0_cxx.cxx.o -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/graph.dir/Unity/unity_0_cxx.cxx",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/graph.dir/Unity/unity_0_cxx.cxx",
+  "output": "CMakeFiles/graph.dir/Unity/unity_0_cxx.cxx.o"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang   -g -std=gnu17 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -fpch-instantiate-templates -Xclang -emit-pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit4.dir/cmake_pch.h -x c-header -o CMakeFiles/bit4.dir/cmake_pch.h.pch -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit4.dir/cmake_pch.h.c",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit4.dir/cmake_pch.h.c",
+  "output": "CMakeFiles/bit4.dir/cmake_pch.h.pch"
+},
+{
+  "directory": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug",
+  "command": "/usr/bin/clang   -g -std=gnu17 -fcolor-diagnostics -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -O0 -g3 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize=address,undefined,leak -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -Winvalid-pch -Xclang -include-pch -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit4.dir/cmake_pch.h.pch -Xclang -include -Xclang /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit4.dir/cmake_pch.h -o CMakeFiles/bit4.dir/Unity/unity_0_c.c.o -c /home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit4.dir/Unity/unity_0_c.c",
+  "file": "/home/workstation/Algorithms_MIT/cpp/cmake-build-debug/CMakeFiles/bit4.dir/Unity/unity_0_c.c",
+  "output": "CMakeFiles/bit4.dir/Unity/unity_0_c.c.o"
+}
+]
