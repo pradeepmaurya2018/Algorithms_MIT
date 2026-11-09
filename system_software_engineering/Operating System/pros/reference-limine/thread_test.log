@@ -1,0 +1,242 @@
+
+PrOS: Kernel entered kmain()
+PrOS: Serial logging is working!
+PrOS: TSS GDT low: 0x8000890670C00067
+PrOS: TSS GDT high: 0x00000000FFFFFFFF
+PrOS: Installing PrOS GDT
+PrOS: PrOS GDT loaded
+PrOS: New CS selector: 0x0000000000000008
+PrOS: New DS selector: 0x0000000000000010
+PrOS: IDT loaded
+PrOS: Exception gates installed: 0, 6, 8, 13, 14
+PrOS: Initializing TSS
+PrOS: TSS address: 0xFFFFFFFF800670C0
+PrOS: TSS size: 0x0000000000000068
+PrOS: TSS first qword: 0x0000000000000000
+PrOS: TSS IOMAP base: 0x0000000000000068
+PrOS: TSS loaded
+PrOS: Current GDT base: 0xFFFFFFFF80006020PrOS: Current GDT limit: 0x0000000000000037PrOS: Current CS selector: 0x0000000000000008
+PrOS: Limine base revision supported
+PrOS: Current CR3: 0x000000007FF7B000
+PrOS: PML4 physical base: 0x000000007FF7B000
+PrOS: HHDM offset: 0xFFFF800000000000
+PrOS: PML4 virtual address: 0xFFFF80007FF7B000
+PrOS: Kernel PML4 index: 511
+PrOS: PML4[511]: 0x000000007FF7A027
+PrOS: Kernel PML4 entry is PRESENT
+PrOS: PDPT virtual address: 0xFFFF80007FF7A000
+PrOS: Kernel PDPT index: 510
+PrOS: PDPT[510]: 0x000000007FF79027
+PrOS: PDPT entry points to a page directory
+PrOS: Page Directory virtual address: 0xFFFF80007FF79000
+PrOS: Kernel PD index: 0
+PrOS: PDE[0]: 0x000000007FF78027
+PrOS: PDE points to a page table (4 KiB pages)
+PrOS: Page Table virtual address: 0xFFFF80007FF78000
+PrOS: Kernel PT index: 0
+PrOS: PTE[0]: 0x800000007FECA023
+PrOS: Kernel virtual address: 0xFFFFFFFF80000000
+PrOS: Mapped physical address: 0x000000007FECA000
+PrOS: Executable physical base: 0x000000007FECA000
+PrOS: Executable virtual base:  0xFFFFFFFF80000000
+
+========================================
+ PrOS Physical Memory Map
+========================================
+Total entries: 20
+
+Region 0
+  Base:   0x0000000000001000
+  Length: 0x0000000000072000
+  Type:   BOOTLOADER_RECLAIMABLE (0x0000000000000005)
+
+Region 1
+  Base:   0x0000000000073000
+  Length: 0x000000000002C000
+  Type:   USABLE (0x0000000000000000)
+
+Region 2
+  Base:   0x000000000009FC00
+  Length: 0x0000000000000400
+  Type:   RESERVED (0x0000000000000001)
+
+Region 3
+  Base:   0x00000000000F0000
+  Length: 0x0000000000005000
+  Type:   RESERVED (0x0000000000000001)
+
+Region 4
+  Base:   0x00000000000F5000
+  Length: 0x0000000000001000
+  Type:   RESERVED_MAPPED (0x0000000000000008)
+
+Region 5
+  Base:   0x00000000000F6000
+  Length: 0x000000000000A000
+  Type:   RESERVED (0x0000000000000001)
+
+Region 6
+  Base:   0x0000000000100000
+  Length: 0x000000007FDC6000
+  Type:   USABLE (0x0000000000000000)
+
+Region 7
+  Base:   0x000000007FEC6000
+  Length: 0x0000000000004000
+  Type:   BOOTLOADER_RECLAIMABLE (0x0000000000000005)
+
+Region 8
+  Base:   0x000000007FECA000
+  Length: 0x0000000000068000
+  Type:   KERNEL_AND_MODULES (0x0000000000000006)
+
+Region 9
+  Base:   0x000000007FF32000
+  Length: 0x0000000000016000
+  Type:   BOOTLOADER_RECLAIMABLE (0x0000000000000005)
+
+Region 10
+  Base:   0x000000007FF48000
+  Length: 0x0000000000019000
+  Type:   USABLE (0x0000000000000000)
+
+Region 11
+  Base:   0x000000007FF61000
+  Length: 0x000000000007E000
+  Type:   BOOTLOADER_RECLAIMABLE (0x0000000000000005)
+
+Region 12
+  Base:   0x000000007FFDF000
+  Length: 0x0000000000001000
+  Type:   RESERVED (0x0000000000000001)
+
+Region 13
+  Base:   0x000000007FFE0000
+  Length: 0x0000000000003000
+  Type:   RESERVED_MAPPED (0x0000000000000008)
+
+Region 14
+  Base:   0x000000007FFE3000
+  Length: 0x000000000001D000
+  Type:   RESERVED (0x0000000000000001)
+
+Region 15
+  Base:   0x00000000B0000000
+  Length: 0x0000000010000000
+  Type:   RESERVED (0x0000000000000001)
+
+Region 16
+  Base:   0x00000000FD000000
+  Length: 0x00000000003E8000
+  Type:   FRAMEBUFFER (0x0000000000000007)
+
+Region 17
+  Base:   0x00000000FED1C000
+  Length: 0x0000000000004000
+  Type:   RESERVED (0x0000000000000001)
+
+Region 18
+  Base:   0x00000000FFFC0000
+  Length: 0x0000000000040000
+  Type:   RESERVED (0x0000000000000001)
+
+Region 19
+  Base:   0x000000FD00000000
+  Length: 0x0000000300000000
+  Type:   RESERVED (0x0000000000000001)
+
+----------------------------------------
+Total usable RAM: 2046 MiB
+========================================
+PrOS: PMM initialized successfully
+PrOS: VMM initialized successfully
+PrOS: heap_grow: allocating physical page
+PrOS: heap_grow: mapping virtual page
+PrOS: heap_grow: page mapped
+PrOS: heap_grow: created new free block
+PrOS: Kernel heap initialized successfully
+PrOS: Testing virtual memory mapping
+PrOS: Test physical page: 0x0000000000104000
+PrOS: Virtual mapping successful
+PrOS: Value written: 0x123456789ABCDEF0
+PrOS: Value read back: 0x123456789ABCDEF0
+PrOS: VMM mapping test PASSED
+PrOS: Total pages: 523787
+PrOS: Free pages: 523735
+PrOS: Testing page allocation
+PrOS: Allocated physical address: 0x0000000000108000
+PrOS: Free pages after allocation: 523734
+PrOS: Page freed successfully
+PrOS: Free pages after freeing: 523735
+PrOS: PMM allocation/free test PASSED
+PrOS: Testing reserved-page protection
+PrOS: Reserved-page protection PASSED
+PrOS: Framebuffer initialized
+PrOS: Bootloader memory reclamation deferred\nPrOS: Kernel initialization complete
+PrOS: Testing kernel heap
+PrOS: Allocation and write successful
+PrOS: Heap data verification PASSED
+PrOS: Heap free successful
+PrOS: Heap reuse test PASSED
+PrOS: Heap total bytes: 4096
+PrOS: Heap used bytes: 48
+PrOS: Kernel heap test PASSED
+PrOS: Testing kernel threads
+PrOS: Thread subsystem initialized
+PrOS: thread_create: ENTER
+
+PrOS: thread_create: allocating TCB
+PrOS: thread_create: TCB allocated
+PrOS: thread_create: allocating stack
+PrOS: heap_grow: allocating physical page
+PrOS: heap_grow: mapping virtual page
+PrOS: heap_grow: page mapped
+PrOS: heap_grow: extended free tail
+PrOS: thread_create: stack allocated
+PrOS: thread_create: building initial context
+PrOS: thread_create: initial context built
+PrOS: thread rsp = 0xFFFFA10000001038
+PrOS: saved r15 = 0x0000000000000000
+PrOS: saved r14 = 0x0000000000000000
+PrOS: saved r13 = 0x0000000000000000
+PrOS: saved r12 = 0xFFFFFFFF800016C0
+PrOS: saved rbx = 0x0000000000000000
+PrOS: saved rbp = 0x0000000000000000
+PrOS: saved RIP = 0xFFFFFFFF8000342B
+PrOS: thread_create: TCB verified
+PrOS: thread_create: RETURNING
+PrOS: Thread A created
+PrOS: thread_create: ENTER
+
+PrOS: thread_create: allocating TCB
+PrOS: thread_create: TCB allocated
+PrOS: thread_create: allocating stack
+PrOS: heap_grow: allocating physical page
+PrOS: heap_grow: mapping virtual page
+PrOS: heap_grow: page mapped
+PrOS: heap_grow: extended free tail
+PrOS: thread_create: stack allocated
+PrOS: thread_create: building initial context
+PrOS: thread_create: initial context built
+PrOS: thread rsp = 0xFFFFA100000020A8
+PrOS: saved r15 = 0x0000000000000000
+PrOS: saved r14 = 0x0000000000000000
+PrOS: saved r13 = 0x0000000000000000
+PrOS: saved r12 = 0xFFFFFFFF80001670
+PrOS: saved rbx = 0x0000000000000000
+PrOS: saved rbp = 0x0000000000000000
+PrOS: saved RIP = 0xFFFFFFFF8000342B
+PrOS: thread_create: TCB verified
+PrOS: thread_create: RETURNING
+PrOS: Thread B created
+PrOS: scheduler_set_threads: configured
+PrOS: Scheduler initialized
+PrOS: Starting kernel thread
+THREAD A: A1
+THREAD B: B1
+THREAD A: A2
+THREAD B: B2
+THREAD A: A3
+THREAD A: finished
+THREAD B: B3
+THREAD B: finished
