@@ -1,0 +1,3 @@
+/home/work/workspaces/ipu-simulator/build/CMakeFiles/ipu-simulator.dir
+/home/work/workspaces/ipu-simulator/build/CMakeFiles/edit_cache.dir
+/home/work/workspaces/ipu-simulator/build/CMakeFiles/rebuild_cache.dir

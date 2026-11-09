@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/work/workspaces/nic-validator/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

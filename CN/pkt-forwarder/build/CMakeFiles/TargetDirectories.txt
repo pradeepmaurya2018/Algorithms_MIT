@@ -1,0 +1,3 @@
+/home/work/CLionProjects/Algorithms_MIT/CN/pkt-forwarder/build/CMakeFiles/pkt-forwarder.dir
+/home/work/CLionProjects/Algorithms_MIT/CN/pkt-forwarder/build/CMakeFiles/edit_cache.dir
+/home/work/CLionProjects/Algorithms_MIT/CN/pkt-forwarder/build/CMakeFiles/rebuild_cache.dir

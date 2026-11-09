@@ -1,0 +1,3 @@
+/home/work/workspaces/nic-validator/build/CMakeFiles/nic-validator.dir
+/home/work/workspaces/nic-validator/build/CMakeFiles/edit_cache.dir
+/home/work/workspaces/nic-validator/build/CMakeFiles/rebuild_cache.dir
